@@ -18,7 +18,7 @@
   const GITHUB_USER = 'codewithayanda';
   const CONTACT_EMAIL = 'biyelaayanda3@gmail.com';
   // EmailJS public identifiers (safe to expose; they only allow sending through the configured template).
-  const EMAILJS = { publicKey: 'GJnG5ZswZb2zdW6s_', serviceId: 'service_vsfw20j', templateId: 'template_5ix7nl5' };
+  const EMAILJS = { publicKey: 'avQKvDoZKcDK9RwkT', serviceId: 'service_3ghtcsw', templateId: 'template_q4s213f' };
 
   /* ---- Theme ------------------------------------------------------------ */
   const themeToggle = $('#theme-toggle');
