@@ -1,578 +1,667 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E4K8F0MX5N"></script>
-<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-E4K8F0MX5N');</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ayanda Biyela | .NET &amp; Angular Developer in Durban</title>
+  <meta name="description" content="Portfolio of Ayanda Biyela, a .NET and Angular developer in Durban, South Africa. ASP.NET Core APIs, Angular apps and Azure/AWS delivery pipelines, plus projects like Cleared and AI Footprint.">
+  <meta name="author" content="Ayanda Biyela">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#090a0f">
 
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Start your development with JohnDoe landing page.">
-    <meta name="author" content="Devcrud">
-    <title>Ayanda Biyela</title>
-    <!-- font icons -->
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <!-- Bootstrap + JohnDoe main styles -->
-	<link rel="stylesheet" href="assets/css/johndoe.css">
+  <!-- Social previews + canonical. If the site lives at a different address, update these four URLs and the JSON-LD below. -->
+  <link rel="canonical" href="https://codewithayanda.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ayanda Biyela">
+  <meta property="og:title" content="Ayanda Biyela | .NET &amp; Angular Developer">
+  <meta property="og:description" content="ASP.NET Core APIs, Angular apps and Azure/AWS delivery pipelines. See what I do at work and what I'm building next.">
+  <meta property="og:url" content="https://codewithayanda.github.io/">
+  <meta property="og:image" content="https://codewithayanda.github.io/assets/imgs/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ayanda Biyela, .NET and Angular developer in Durban, South Africa">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/imgs/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/imgs/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fonts load without blocking first paint; a metrics-matched fallback (see styles.css) keeps the swap from shifting the layout. -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <script>
+    // Runs before first paint: flags JS for the reveal animations and applies a saved theme choice.
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+      } catch (e) { /* storage blocked: follow the OS theme */ }
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ayanda Biyela",
+    "url": "https://codewithayanda.github.io/",
+    "image": "https://codewithayanda.github.io/assets/imgs/ayanda.webp",
+    "jobTitle": "Software Engineer II",
+    "worksFor": { "@type": "Organization", "name": "LexisNexis" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Durban", "addressRegion": "KwaZulu-Natal", "addressCountry": "ZA" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Mangosuthu University of Technology" },
+    "knowsAbout": [".NET", "C#", "ASP.NET Core", "Angular", "Entity Framework Core", "SQL Server", "Azure", "AWS", "CI/CD"],
+    "sameAs": [
+      "https://github.com/codewithayanda",
+      "https://www.linkedin.com/in/ayanda-biyela-27195b236"
+    ]
+  }
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E4K8F0MX5N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-E4K8F0MX5N');
+  </script>
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-    <a  class="btn btn-primary btn-component" data-spy="affix" data-offset-top="600"><i class="ti-shift-left-alt"></i> Developer</a>
-    <header class="header">
-        <div class="container">
-            <ul class="social-icons pt-3">
-                <li class="social-item"><a class="social-link text-light" href="https://biyelaayanda3@gmail.com"><i class="ti" aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="https://linkedin.com/in/ayanda-biyela-27195b236"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="https://github.com/biyelaayanda3/"><i class="ti-github" aria-hidden="true"></i></a></li>
-            </ul>  
-            <div class="header-content">
-                <h4 class="header-subtitle" >Hello, I am</h4>
-                <h1 class="header-title">Ayanda Biyela</h1>
-                <h6 class="header-mono" >Software Developer</h6>
-                <a href="/assets/docs/curriculum_vitae.pdf" download="curriculum_vitae">
-                <button class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>
-                    Print Resume</button></a>
-            </div>
-        </div>
-    </header>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
-        <div class="container">
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#resume" class="nav-link">Resume</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav brand">
-                    <img src="assets/imgs/avatarNew.jpg" alt="" class="brand-img">
-                    <li class="brand-txt">
-                        <h5 class="brand-title">Ayanda Biyela</h5>
-                        <div class="brand-subtitle">Web | Software Developer</div>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="#portfolio" class="nav-link">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#blog" class="nav-link">My Projects</a>
-                    </li>
-                    <li class="nav-item last-item">
-                        <a href="#contact" class="nav-link">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="container-fluid">
-        <div id="about" class="row about-section">
-            <div class="col-lg-4 about-card">
-                <h3 class="font-weight-light">Who am I ?</h3>
-                <span class="line mb-5"></span>
-                <h5 class="mb-3">A Software Developer Located in South Africa / Kwa-Zulu Natal / Nongoma</h5>
-                <p class="mt-20">Software Developer adept in bringing forth expertise in design,
-                    installation, testing and maintenance of software systems. Equipped with a
-                    diverse and promising skill-set. Proficient in various platforms, languages
-                    and embedded systems. Able to effectively self-manage during
-                    independent projects, as well as collaborate as part of a productive team</p>
-                <button class="btn btn-outline-danger"><i class="icon-down-circled2 "></i>Download My CV</button>
-            </div>
-            <div class="col-lg-4 about-card">
-                <h3 class="font-weight-light">Personal Info</h3>
-                <span class="line mb-5"></span>
-                <ul class="mt40 info list-unstyled">
-                    <li><span>Birthdate</span> : 10/12/2000</li>
-                    <li><span>Email</span> : biyelaayanda3@gmail.com</li>
-                    <li><span>Phone</span> : (+27) 79 111 5835</li>
-                    <li><span>Address</span> :  12 Main Street Nongoma 3950 .</li>
-                </ul>
-                <ul class="social-icons pt-3">
-                    <li class="social-item"><a class="social-link text-light" href="https://biyelaayanda3@gmail.com"><i class="ti-email" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="https://linkedin.com/in/ayanda-biyela-27195b236"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="https://github.com/biyelaayanda3"><i class="ti-github" aria-hidden="true"></i></a></li>
-                </ul>  
-            </div>
-            <div class="col-lg-4 about-card">
-                <h3 class="font-weight-light">My Expertise</h3>
-                <span class="line mb-5"></span>
-                <div class="row">
-                    <div class="col-1 text-danger pt-1"><i class="ti-world icon-lg"></i></div>
-                    <div class="col-10 ml-auto mr-3">
-                        <h6>TeamWork</h6>
-                        <p class="subtitle"> Worked as part of DUT AppFactory team and alongside senior Web Developer</p>
-                        <hr>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1 text-danger pt-1"><i class="ti-user icon-lg"></i></div>
-                    <div class="col-10 ml-auto mr-3">
-                        <h6>Independence</h6>
-                        <p class="subtitle"> Comfortable working with minimal supervision and good at communicating progress.</p>
-                        <hr>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1 text-danger pt-1"><i class="ti-timer icon-lg"></i></div>
-                    <div class="col-10 ml-auto mr-3">
-                        <h6>Time Management</h6>
-                        <p class="subtitle">Able to produce results with quick turnarounds in a fast-paced and agile environment.</p>
-                        <hr>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1 text-danger pt-1"><i class="ti-briefcase icon-lg"></i></div>
-                    <div class="col-10 ml-auto mr-3">
-                        <h6>Professional development</h6>
-                        <p class="subtitle">Driven to learn new things and grow as a developer and team member</p>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Icon sprite (Lucide-style strokes; GitHub and LinkedIn marks from Simple Icons) -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-columns" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18"/></symbol>
+    <symbol id="i-coffee" viewBox="0 0 24 24"><path d="M10 2v2M14 2v2M6 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/></symbol>
+    <symbol id="i-swap" viewBox="0 0 24 24"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></symbol>
+    <symbol id="i-graduation" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="brand" href="#home">
+        <span class="brand-mark" aria-hidden="true">AB</span>
+        <span class="brand-name">Ayanda Biyela</span>
+      </a>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#experience">Experience</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-cv-mobile"><a class="btn btn-ghost btn-sm" href="assets/docs/curriculum_vitae.pdf" download="Ayanda-Biyela-CV.pdf"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> Download CV</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Switch theme">
+          <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+          <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        </button>
+        <a class="btn btn-ghost btn-sm nav-cv" href="assets/docs/curriculum_vitae.pdf" download="Ayanda-Biyela-CV.pdf"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> CV</a>
+        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
     </div>
+  </header>
 
-    <!--Resume Section-->
-    <section class="section" id="resume">
-        <div class="container">
-            <h2 class="mb-5"><span class="text-danger">My</span> Resume</h2>
-            <div class="row">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card">
-                       <div class="card-header">
-                            <div class="mt-2">
-                                <h4>Work History</h4>
-                                <span class="line"></span>  
-                            </div>
-                        </div>
-                        <div class="card-body"> <h6 class="title text-danger">2023/10/02 - current </h6>
-                            <span><i>Website Developer </i>@ <b>RandWater</b></span>
-                            
-                            <P class="subtitle"> <b class="ti-location-pin" ></b><i>Gauteng, Glenvista</i>  </P>
-                                <span>Duties :
-                                <li>Fix bugs on the existing system and add features on the website, with PHP,HTML, XAMPP, JS</li>
-                            </span>
-                            
-                            <hr>
-                            <h6 class="title text-danger">2023/01/25 - 2023/09/30 </h6>
-                            <span><i>Web Application Developer </i>@ <b>DUT AppFactory</b></span>
-                            
-                            <P class="subtitle"> <b class="ti-location-pin"></b><i>KwaZulu-Natal, Durban</i>  </P>
-                                <span>Duties :
-                                <li>System testing and debugging, bug fix</li>
-                                <li>Attended daily stand ups meeting, Presentation where and idea preaching </li>
-                                <li>Developed a feature for existing system to capture gift and send gifts using .NET, Teleprinter , MVC and C#</li>
-                                <li>Created and lead a development of new Web Application with .NET 7 and ABP Framework</li>
-                            </span>
-                            
-                            <hr>
-                            <h6 class="title text-danger">2022/06/01 - 2022/12/10 </h6>
-                            <span><i>Website Developer </i>@ <b>Izingcweti ICT Solutions</b></span>
-                            
-                            <P class="subtitle"> <b class="ti-location-pin"></b><i>KwaZulu-Natal, Durban</i>  </P>
-                                <span>Duties :
-                                <li>worked together with the team and developed a new website for the company</li>
-                                <li>Introduced a new Database that can be used to save and access data very quickly </li>
-                            </span>
-                        </div>
-                    </div>
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="pill"><svg class="icon" aria-hidden="true" style="width:1em;height:1em"><use href="#i-map-pin"/></svg> Software engineer · Durban, South Africa</p>
+          <h1 id="hero-title">Hi, I'm <span class="grad">Ayanda Biyela</span>. I build reliable web apps &amp; APIs with <span class="nowrap">.NET and Angular.</span></h1>
+          <p class="lead">I'm a software engineer at LexisNexis with 4+ years of experience across the full software lifecycle: ASP.NET Core APIs, Angular front-ends and Azure/AWS delivery pipelines. Alongside work, I'm building <a href="#cleared">Cleared</a>, an invoicing platform for South African small businesses, and <a href="#ai-footprint">AI Footprint</a>, a VS Code extension.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#projects">View my work <svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
+            <a class="btn btn-ghost" href="assets/docs/curriculum_vitae.pdf" download="Ayanda-Biyela-CV.pdf"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> Download CV</a>
+          </div>
+          <ul class="social" aria-label="Find me online">
+            <li><a class="icon-btn" href="https://github.com/codewithayanda" target="_blank" rel="noopener" aria-label="GitHub (opens in a new tab)"><svg class="icon icon--fill" aria-hidden="true"><use href="#i-github"/></svg></a></li>
+            <li><a class="icon-btn" href="https://www.linkedin.com/in/ayanda-biyela-27195b236" target="_blank" rel="noopener" aria-label="LinkedIn (opens in a new tab)"><svg class="icon icon--fill" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+            <li><a class="icon-btn" href="mailto:biyelaayanda3@gmail.com" aria-label="Email me"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="code-card">
+            <div class="code-top"><i></i><i></i><i></i><b>Ayanda.cs</b></div>
+<pre><code><span class="c-kw">var</span> ayanda <span class="c-pn">=</span> <span class="c-kw">new</span> <span class="c-ty">Developer</span>
+<span class="c-pn">{</span>
+    <span class="c-pr">Name</span>     <span class="c-pn">=</span> <span class="c-st">"Ayanda Biyela"</span><span class="c-pn">,</span>
+    <span class="c-pr">Role</span>     <span class="c-pn">=</span> <span class="c-st">"Software Engineer II"</span><span class="c-pn">,</span>
+    <span class="c-pr">Company</span>  <span class="c-pn">=</span> <span class="c-st">"LexisNexis"</span><span class="c-pn">,</span>
+    <span class="c-pr">Location</span> <span class="c-pn">=</span> <span class="c-st">"Durban, South Africa"</span><span class="c-pn">,</span>
+    <span class="c-pr">Stack</span>    <span class="c-pn">= [</span><span class="c-st">".NET"</span><span class="c-pn">,</span> <span class="c-st">"Angular"</span><span class="c-pn">,</span> <span class="c-st">"SQL Server"</span><span class="c-pn">],</span>
+    <span class="c-pr">Cloud</span>    <span class="c-pn">= [</span><span class="c-st">"Azure"</span><span class="c-pn">,</span> <span class="c-st">"AWS"</span><span class="c-pn">],</span>
+    <span class="c-pr">Building</span> <span class="c-pn">= [</span><span class="c-st">"Cleared"</span><span class="c-pn">,</span> <span class="c-st">"AI Footprint"</span><span class="c-pn">],</span>
+<span class="c-pn">};</span><span class="caret"></span></code></pre>
+          </div>
+          <span class="float-chip fc-1">ASP.NET Core</span>
+          <span class="float-chip fc-2">Angular</span>
+          <span class="float-chip fc-3">Azure · AWS</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="reveal">
+          <figure class="portrait" style="margin:0">
+            <img src="assets/imgs/ayanda.webp" width="640" height="800" alt="Portrait of Ayanda Biyela" loading="lazy" decoding="async">
+            <figcaption class="portrait-badge"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"/></svg> Durban, South Africa</figcaption>
+          </figure>
+        </div>
+
+        <div class="about-copy reveal" style="--d:100ms">
+          <p class="kicker">About</p>
+          <h2 id="about-title">A developer who likes things that work, and keep working.</h2>
+          <p style="margin-top:1.25rem">I'm a software engineer based in Durban, KwaZulu-Natal. Over the last four-plus years I've worked across the whole software lifecycle: building features and fixing defects, designing REST APIs, tuning data access with Entity Framework Core, and helping teams ship through CI/CD pipelines on Azure and AWS.</p>
+          <p>At <strong>LexisNexis</strong> I work across ASP.NET Core APIs and Angular front-ends in an Agile/Scrum team, with stand-ups, sprint planning, code reviews and unit tests as part of the routine. I also support an AI-driven initiative with proof-of-concept integrations, data preparation and API orchestration.</p>
+          <p>Away from the day job I build the tools I'd like to exist: <strong>Cleared</strong> for South African small-business invoicing and <strong>AI Footprint</strong> for staying honest about AI-assisted coding. Whatever I'm working on, I like owning a feature end to end and keeping the architecture clean.</p>
+
+          <dl class="facts">
+            <dt>Based in</dt><dd>Durban, KwaZulu-Natal, South Africa</dd>
+            <dt>Currently</dt><dd>Software Engineer II at LexisNexis</dd>
+            <dt>Focus</dt><dd>ASP.NET Core, Angular, Azure and AWS</dd>
+            <dt>Languages</dt><dd>English and isiZulu (both fluent)</dd>
+          </dl>
+
+          <div class="stats">
+            <div class="stat"><b class="grad">4+</b><span>years of experience</span></div>
+            <div class="stat"><b class="grad">4</b><span>roles so far</span></div>
+            <div class="stat"><b class="grad">2</b><span>clouds: Azure and AWS</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section section--alt" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">Experience</p>
+          <h2 id="experience-title">Where I've worked</h2>
+          <p>From a first internship to a corporate engineering team, each role added something new to the toolbox.</p>
+        </div>
+
+        <ol class="timeline">
+          <li class="tl-item is-current reveal">
+            <article class="card tl-card" data-spot>
+              <div class="tl-top">
+                <div>
+                  <h3 class="tl-role">Software Engineer II</h3>
+                  <p class="tl-org">LexisNexis <span>· Durban</span></p>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card">
-                       <div class="card-header">
-                            <div class="mt-2">
-                                <h4>Education</h4>
-                                <span class="line"></span>  
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            
-                            <h6 class="title text-danger">2020 - 2022</h6>
-                            <P>Diploma in Information Communication Technology</P>
-                            <P class="subtitle">Mangosuthu University of Technology <br>
-                                GPA : 77% <br>
-                                MODULES : INFORMATION TECHNOLOGY, INFORMATION SYSTEMS, INDUSTRY EXPOSURE, DEVELOPMENT SYSTEM, INTERNET PROGRAMMING
-                            </P>
-                            <hr>
-                            <h6 class="title text-danger">2015 - 2019</h6>
-                            <P>High School Degree</P>
-                            <P class="subtitle">Kwa-Ziphethe Secondary School <br>
-                                subjects : IsiZulu HL, English FAL, Mathematics, Life Orientation, Business Studies, Geography, Life Sciences, Physical Sciences
-                            </P>
-                            
-                        </div>
-                    </div>
+                <p class="tl-date"><em>Oct 2024 – Present</em></p>
+              </div>
+              <ul class="ticks">
+                <li>Build features and fix defects across <b>ASP.NET Core APIs</b> and <b>Angular</b> front-ends.</li>
+                <li>Design and consume REST endpoints; optimize EF Core queries and data access patterns.</li>
+                <li>Contribute to <b>CI/CD pipelines</b> (Azure/AWS), improving release reliability and speed.</li>
+                <li>Collaborate in daily stand-ups, sprint planning and reviews; write unit tests and take part in code reviews.</li>
+                <li>Support an <b>AI-driven initiative</b> to enhance product capabilities (POC integrations, data preparation, API orchestration).</li>
+              </ul>
+              <p class="tl-note"><b>Selected contributions:</b> accelerated feature delivery, reduced production bugs and improved code quality through automated checks and tests.</p>
+              <ul class="chips">
+                <li class="chip">ASP.NET Core</li><li class="chip">Angular</li><li class="chip">EF Core</li><li class="chip">Azure</li><li class="chip">AWS</li><li class="chip">CI/CD</li><li class="chip">Unit testing</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="tl-item reveal">
+            <article class="card tl-card" data-spot>
+              <div class="tl-top">
+                <div>
+                  <h3 class="tl-role">Software Developer</h3>
+                  <p class="tl-org">Randwater <span>· Glenvista, Gauteng</span></p>
                 </div>
-                <div class="col-lg-4">
-                    <div class="card">
-                       <div class="card-header">
-                            <div class="pull-left">
-                                <h4 class="mt-2">Skills</h4>
-                                <span class="line"></span>  
-                            </div>
-                        </div>
-                        <div class="card-body pb-2">
-                           <h6>HTML&amp; CSS</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>JavaScript</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 65%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>.Net</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 60%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>C#</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 50%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>React JS</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 40%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>Communication</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>Leadership</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                       <div class="card-header">
-                            <div class="pull-left">
-                                <h4 class="mt-2">Languages</h4>
-                                <span class="line"></span>  
-                            </div>
-                        </div>
-                        <div class="card-body pb-2">
-                           <h6>English</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>IsiZulu</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                           
-                        </div>
-                    </div>
+                <p class="tl-date">Oct 2023 – Oct 2024</p>
+              </div>
+              <ul class="ticks">
+                <li>Maintained and enhanced the corporate website using <b>PHP, HTML and JavaScript</b> on XAMPP.</li>
+                <li>Shipped incremental features and fixed bugs, improving site stability and user experience.</li>
+                <li>Introduced basic version control practices and documented changes for handover.</li>
+              </ul>
+              <ul class="chips">
+                <li class="chip">PHP</li><li class="chip">HTML</li><li class="chip">JavaScript</li><li class="chip">XAMPP</li><li class="chip">Git</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="tl-item reveal">
+            <article class="card tl-card" data-spot>
+              <div class="tl-top">
+                <div>
+                  <h3 class="tl-role">Software Developer (Contract)</h3>
+                  <p class="tl-org">DUT AppFactory <span>· Durban</span></p>
                 </div>
+                <p class="tl-date">Jan 2023 – Sep 2023</p>
+              </div>
+              <ul class="ticks">
+                <li>Led development of a new <b>.NET 7 + ABP Framework</b> web application (server-side MVC + EF Core).</li>
+                <li>Delivered features across modules (for example user management and reporting) and took part in daily stand-ups and demos.</li>
+                <li>Practiced clean architecture patterns and wrote unit tests to safeguard core business logic.</li>
+              </ul>
+              <ul class="chips">
+                <li class="chip">.NET 7</li><li class="chip">ABP Framework</li><li class="chip">MVC</li><li class="chip">EF Core</li><li class="chip">Clean architecture</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="tl-item reveal">
+            <article class="card tl-card" data-spot>
+              <div class="tl-top">
+                <div>
+                  <h3 class="tl-role">Software Developer Intern</h3>
+                  <p class="tl-org">Izingcweti ICT <span>· Durban</span></p>
+                </div>
+                <p class="tl-date">Jun 2022 – Dec 2022</p>
+              </div>
+              <ul class="ticks">
+                <li>Built a new company website and improved data access by introducing a more performant database setup.</li>
+                <li>Collaborated on requirements gathering and delivered iterative updates with stakeholder feedback.</li>
+              </ul>
+              <ul class="chips">
+                <li class="chip">Web development</li><li class="chip">Databases</li><li class="chip">Requirements gathering</li>
+              </ul>
+            </article>
+          </li>
+        </ol>
+
+        <h3 class="subhead reveal">Project highlights from my roles</h3>
+        <div class="hl-grid">
+          <article class="card hl-card reveal" data-spot>
+            <span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-database"/></svg></span>
+            <h4>ABP-based Management App</h4>
+            <p class="hl-stack">.NET 7 · ABP · EF Core · SQL Server</p>
+            <p>Designed domain entities, repositories and role-based authorization; implemented CRUD modules and reporting pages.</p>
+          </article>
+          <article class="card hl-card reveal" style="--d:80ms" data-spot>
+            <span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-layout"/></svg></span>
+            <h4>ASP.NET Core + Angular Dashboard</h4>
+            <p class="hl-stack">.NET 6 · Angular · REST APIs</p>
+            <p>Built a modular dashboard with reusable components and API integration; added unit tests and error-handling middleware.</p>
+          </article>
+          <article class="card hl-card reveal" style="--d:160ms" data-spot>
+            <span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-sparkles"/></svg></span>
+            <h4>AI-Assisted Feature Exploration</h4>
+            <p class="hl-stack">Azure / AWS services</p>
+            <p>Contributed to POCs for intelligent search and insights to enhance product functionality (data pipelines, API integration).</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">Projects</p>
+          <h2 id="projects-title">What I'm building, and what I've built</h2>
+          <p>Everything here is on my <a href="https://github.com/codewithayanda" target="_blank" rel="noopener">GitHub</a>. The newest work is at the top.</p>
+        </div>
+
+        <h3 class="group-title">Building now</h3>
+        <div class="grid-2">
+          <article class="card project-card project-card--feature reveal" id="cleared" data-spot data-repos="Cleared">
+            <div class="pc-head">
+              <span class="pc-logo"><img src="assets/imgs/projects/cleared.svg" width="52" height="52" alt="" loading="lazy"></span>
+              <div class="pc-titles">
+                <h4 class="pc-title">Cleared</h4>
+                <p class="pc-sub">Invoicing and VAT for South African small businesses</p>
+              </div>
+              <span class="badge"><span class="pulse"></span>In development</span>
             </div>
-        </div>
-    </section>
-
-   
-    <section class="section bg-dark py-5">
-        <div class="container text-center">
-            <h2 class="text-light mb-5 font-weight-normal">I Am Available For Web/Software Development</h2>
-            <button class="btn bg-primary w-lg" >Hire me</button>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="section bg-custom-gray" id="portfolio">
-        <div class="container">
-            <h1 class="mb-5"><span class="text-danger">My</span> Portfolio</h1>
-            <div class="portfolio">
-                <div class="filters">
-                    <a href="#" data-filter=".new" class="active">
-                        Projects
-                    </a>
-                    <a href="#" data-filter=".advertising">
-                        MarketX
-                    </a>
-                    <a href="#" data-filter=".branding">
-                        Wiseway
-                    </a>
-                    <a href="#" data-filter=".web">
-                        CommunicationX
-                    </a>
-                </div>
-                <div class="portfolio-container"> 
-                    <div class="col-md-6 col-lg-4 web new">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/comX1 (1).jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/comX1 (1).jpg"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">CommunicationX</h6>
-                                    <p class="subtitle">Coming Soon!</p>
-                                </div>
-                            </div>   
-                        </div>             
-                    </div>
-                   
-                    <div class="col-md-6 col-lg-4 advertising"> 
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/marketx1.png" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                               
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/marketx1.png"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">MARKET-X</h6>
-                                    <p class="subtitle">E-Commerce Application for building tools</p>
-                                </div>
-                            </div>
-                        </div>                                                       
-                    </div> 
-                    
-                    <div class="col-md-6 col-lg-4 advertising new">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/marketx2.png" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">       
-                           <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/marketx2.png"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">MARKET-X</h6>
-                                    <p class="subtitle">Signin to the Application and explore</p>
-                                </div>
-                            </div>
-                        </div>                                                       
-                    </div> 
-                    <div class="col-md-6 col-lg-4 advertising new"> 
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/marketx3.png" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">            
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/marketx3.png"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">MARKET-X</h6>
-                                    <p class="subtitle">Create account with the big e-commerce application in the world</p>
-                                </div>
-                            </div>
-                        </div>
-                                
-                    </div> 
-                    <div class="col-md-6 col-lg-4 branding new">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/wiseway1.png" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                        
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/wiseway1.png"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">Wiseway</h6>
-                                    <p class="subtitle">Student Application</p>
-                                </div>
-                            </div> 
-                        </div>
-                    </div> 
-                    <div class="col-md-6 col-lg-4 branding">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/wiseway2.png" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">  
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/wiseway2.png"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">Wiseway</h6>
-                                    <p class="subtitle">Make wise choices on your career</p>
-                                </div>
-                            </div>
-                        </div>                                                     
-                    </div> 
-                    <div class="col-md-6 col-lg-4 branding new">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/wiseway3.png" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">   
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/wiseway3.png"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">Wiseway</h6>
-                                    <p class="subtitle">Bright Career for all students</p>
-                                </div>
-                            </div>
-                        </div>                                                    
-                    </div> 
-                    <div class="col-md-6 col-lg-4 branding new">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/wiseway4.png" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">   
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/wiseway4.png"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">Wiseway</h6>
-                                    <p class="subtitle">We hava a chat bot designed just for you</p>
-                                </div>
-                            </div>
-                        </div>                                                    
-                    </div> 
-                    <div class="col-md-6 col-lg-4 branding new">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/wiseway8.png" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">   
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/wiseway8.png"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">Wiseway</h6>
-                                    <p class="subtitle">courses available in this institution</p>
-                                </div>
-                            </div>
-                        </div>                                                    
-                    </div> 
-                  
-                </div> 
-            </div>  
-        </div>            
-    </section>
-    <!-- End of portfolio section -->
-
-    <section class="section" id="blog">
-        <div class="container">
-            <h2 class="mb-5">Latest <span class="text-danger">Applications</span></h2>
-            <div class="row">
-                <div class="blog-card">
-                    <div class="img-holder">
-                        <img src="assets/imgs/comX1 (1).jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                    </div>
-                    <div class="content-holder">
-                        <h6 class="title">CommunicationX</h6>
-
-                        <p class="post-details">
-                            <a href="#">By: Ayanda Biyela</a>
-                            <a href="#"><i class="ti-heart text-danger"></i> 234</a>
-                            <a href="#"><i class="ti-comment"></i> 123</a>
-                        </p>
-                        
-                        <p>Coming Soon</p>
-                        <a href="#" class="read-more">Read more <i class="ti-angle-double-right"></i></a>
-                    </div>
-                </div><!-- end of blog wrapper -->
-
-                <!-- blog-card -->
-                <div class="blog-card">
-                    <div class="img-holder">
-                        <img src="assets/imgs/marketx1.png" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                    </div>
-                    <div class="content-holder">
-                        <h6 class="title">Market-X</h6>
-
-                        <p class="post-details">
-                            <a href="#">By: Ayanda Biyela</a>
-                            <a href="#"><i class="ti-heart text-danger"></i> 456</a>
-                            <a href="#"><i class="ti-comment"></i> 264</a>
-                        </p>
-                        
-                        <p>MarketX is an E-commerce application designed to help communities buy building materials easily and always updated about the latest products and sales available, this is a free use application no data needed just need to create an account and then browse what you want and buy, easy</p>
-
-                        <a href="#" class="read-more">Read more <i class="ti-angle-double-right"></i></a>
-                    </div>
-                </div><!-- end of blog wrapper -->
-                <!-- blog-card -->
-                <div class="blog-card">
-                    <div class="img-holder">
-                        <img src="assets/imgs/wiseway1.png" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                    </div>
-                    <div class="content-holder">
-                        <h4 class="title">Wiseway</h4>
-
-                        <p class="post-details">
-                            <a href="#">By: Ayanda Biyela</a>
-                            <a href="#"><i class="ti-heart text-danger"></i> 431</a>
-                            <a href="#"><i class="ti-comment"></i> 312</a>
-                        </p>
-                        
-                        <p>Wiseway is the application created to help students make wise choices when choosing a career path, where students can take a quize test and the result can determine which career is fit for that student and it can also help those who do not know how to calculate abs points...</p>
-
-                        <a href="#" class="read-more">Read more <i class="ti-angle-double-right"></i></a>
-                    </div>
-                </div><!-- end of blog wrapper -->
-
+            <p class="pc-desc">A platform that helps small businesses invoice correctly, track what customers owe and stay on the right side of VAT, without having to be tax experts. The core flow already works end to end: register a business, add a customer, issue an invoice, record the payment and download the PDF.</p>
+            <ul class="ticks">
+              <li><b>VAT rules built in.</b> Standard, zero-rated and exempt lines, with rates that carry the date they apply from.</li>
+              <li><b>Trustworthy records.</b> Issued invoices are locked, numbered without gaps and written to an audit trail.</li>
+              <li><b>Multi-tenant.</b> Many businesses share one platform and each sees only its own data.</li>
+            </ul>
+            <ul class="chips">
+              <li class="chip">ASP.NET Core</li><li class="chip">C#</li><li class="chip">PostgreSQL</li><li class="chip">EF Core</li><li class="chip">Angular</li><li class="chip">TypeScript</li><li class="chip">Tailwind CSS</li><li class="chip">QuestPDF</li><li class="chip">xUnit</li><li class="chip">GitHub Actions</li><li class="chip">AWS (planned)</li>
+            </ul>
+            <div class="pc-foot">
+              <a class="pc-link" href="https://github.com/codewithayanda/Cleared" target="_blank" rel="noopener"><svg class="icon icon--fill" aria-hidden="true"><use href="#i-github"/></svg> View on GitHub</a>
+              <span class="pc-meta" hidden></span>
             </div>
+          </article>
+
+          <article class="card project-card project-card--feature reveal" style="--d:100ms" id="ai-footprint" data-spot data-repos="Ai-Footprint">
+            <div class="pc-head">
+              <span class="pc-logo"><img src="assets/imgs/projects/ai-footprint.png" width="52" height="52" alt="" loading="lazy"></span>
+              <div class="pc-titles">
+                <h4 class="pc-title">AI Footprint</h4>
+                <p class="pc-sub">A VS Code extension for mindful AI-assisted coding</p>
+              </div>
+              <span class="badge badge--muted">Open source · MIT</span>
+            </div>
+            <p class="pc-desc">Helps developers stay honest about how much they lean on AI to write code. It notices large pastes and unusually fast typing, nudges gently and shows a live dashboard. It isn't anti-AI; it's pro-understanding.</p>
+            <ul class="ticks">
+              <li><b>Notices how code arrives.</b> Clipboard-aware paste detection and per-language typing cadence.</li>
+              <li><b>Gentle by design.</b> Three nudge levels with cooldowns, snooze and quiet time while debugging.</li>
+              <li><b>Private.</b> A daily score, streak and dashboard, all stored locally and exportable.</li>
+            </ul>
+            <ul class="chips">
+              <li class="chip">TypeScript</li><li class="chip">VS Code Extension API</li><li class="chip">esbuild</li><li class="chip">ESLint</li>
+            </ul>
+            <div class="pc-foot">
+              <a class="pc-link" href="https://github.com/codewithayanda/Ai-Footprint" target="_blank" rel="noopener"><svg class="icon icon--fill" aria-hidden="true"><use href="#i-github"/></svg> View on GitHub</a>
+              <span class="pc-meta" hidden></span>
+            </div>
+          </article>
         </div>
+
+        <h3 class="group-title">Full-stack and API projects</h3>
+        <div class="grid-2">
+          <article class="card project-card reveal" data-spot data-repos="Meeting-room-backend Meeting-room-frontend">
+            <div class="pc-head">
+              <span class="pc-logo"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg></span>
+              <div class="pc-titles">
+                <h4 class="pc-title">Meeting Room Booking</h4>
+                <p class="pc-sub">.NET 10 Web API + Angular</p>
+              </div>
+            </div>
+            <p class="pc-desc">Book meeting rooms without double-booking. View rooms, then create, edit and cancel bookings, with conflict detection that rejects overlapping slots.</p>
+            <ul class="ticks">
+              <li><b>Clean Architecture</b> with Domain, Application, Infrastructure and API layers enforced by project references.</li>
+              <li><b>Production habits:</b> FluentValidation, JWT auth, Serilog logging, Scalar API docs and unit tests.</li>
+              <li><b>Angular front end</b> with standalone components, lazy-loaded routes and an auth interceptor.</li>
+            </ul>
+            <ul class="chips">
+              <li class="chip">.NET 10</li><li class="chip">EF Core</li><li class="chip">SQL Server</li><li class="chip">JWT</li><li class="chip">Angular</li><li class="chip">Containers</li>
+            </ul>
+            <div class="pc-foot">
+              <a class="pc-link" href="https://github.com/codewithayanda/Meeting-room-backend" target="_blank" rel="noopener"><svg class="icon icon--fill" aria-hidden="true"><use href="#i-github"/></svg> Backend</a>
+              <a class="pc-link" href="https://github.com/codewithayanda/Meeting-room-frontend" target="_blank" rel="noopener"><svg class="icon icon--fill" aria-hidden="true"><use href="#i-github"/></svg> Frontend</a>
+              <span class="pc-meta" hidden></span>
+            </div>
+          </article>
+
+          <article class="card project-card reveal" style="--d:100ms" data-spot data-repos="Donezilla-Backend Donezilla-UI">
+            <div class="pc-head">
+              <span class="pc-logo"><svg class="icon" aria-hidden="true"><use href="#i-columns"/></svg></span>
+              <div class="pc-titles">
+                <h4 class="pc-title">Donezilla</h4>
+                <p class="pc-sub">Sprint board for work items</p>
+              </div>
+            </div>
+            <p class="pc-desc">A sprint board for tracking work. Create and close sprints, move work items across the board and carry unfinished items into the next sprint.</p>
+            <ul class="ticks">
+              <li><b>Layered .NET 10 API</b> with controllers, business and repository layers, AutoMapper, FluentValidation, exception middleware and Swagger docs.</li>
+              <li><b>Tested:</b> xUnit and Moq unit tests for the business and controller layers.</li>
+              <li><b>Angular UI</b> with Angular Material and a typed API client generated from the OpenAPI spec.</li>
+            </ul>
+            <ul class="chips">
+              <li class="chip">.NET 10</li><li class="chip">EF Core</li><li class="chip">SQL Server</li><li class="chip">xUnit</li><li class="chip">Angular</li><li class="chip">OpenAPI</li>
+            </ul>
+            <div class="pc-foot">
+              <a class="pc-link" href="https://github.com/codewithayanda/Donezilla-Backend" target="_blank" rel="noopener"><svg class="icon icon--fill" aria-hidden="true"><use href="#i-github"/></svg> Backend</a>
+              <a class="pc-link" href="https://github.com/codewithayanda/Donezilla-UI" target="_blank" rel="noopener"><svg class="icon icon--fill" aria-hidden="true"><use href="#i-github"/></svg> UI</a>
+              <span class="pc-meta" hidden></span>
+            </div>
+          </article>
+
+          <article class="card project-card reveal" data-spot>
+            <div class="pc-head">
+              <span class="pc-logo"><svg class="icon" aria-hidden="true"><use href="#i-coffee"/></svg></span>
+              <div class="pc-titles">
+                <h4 class="pc-title">Cafeteria</h4>
+                <p class="pc-sub">Cafeteria ordering app</p>
+              </div>
+            </div>
+            <p class="pc-desc">Browse the menu by category, add items to a cart, place orders and review order history. Built with a layered architecture: business, data, repositories and view models.</p>
+            <ul class="chips">
+              <li class="chip">C#</li><li class="chip">ASP.NET Core MVC</li><li class="chip">Razor</li><li class="chip">Repository pattern</li>
+            </ul>
+            <div class="pc-foot">
+              <a class="pc-link" href="https://github.com/codewithayanda/Cafeteria" target="_blank" rel="noopener"><svg class="icon icon--fill" aria-hidden="true"><use href="#i-github"/></svg> View on GitHub</a>
+              <span class="pc-meta">2023–2024</span>
+            </div>
+          </article>
+
+          <article class="card project-card reveal" style="--d:100ms" data-spot>
+            <div class="pc-head">
+              <span class="pc-logo"><svg class="icon" aria-hidden="true"><use href="#i-swap"/></svg></span>
+              <div class="pc-titles">
+                <h4 class="pc-title">Transaction Management</h4>
+                <p class="pc-sub">Accounts and transactions app</p>
+              </div>
+            </div>
+            <p class="pc-desc">A simple banking-style app: create an account, deposit and withdraw funds, check the current balance and review recent transactions.</p>
+            <ul class="chips">
+              <li class="chip">C#</li><li class="chip">ASP.NET Core MVC</li><li class="chip">Razor</li><li class="chip">Repository pattern</li>
+            </ul>
+            <div class="pc-foot">
+              <a class="pc-link" href="https://github.com/codewithayanda/Transaction_Management" target="_blank" rel="noopener"><svg class="icon icon--fill" aria-hidden="true"><use href="#i-github"/></svg> View on GitHub</a>
+              <span class="pc-meta">2024</span>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="group-title">Mobile apps</h3>
+        <article class="card app-card reveal" data-spot>
+          <div>
+            <div class="pc-head">
+              <span class="pc-logo"><svg class="icon" aria-hidden="true"><use href="#i-bag"/></svg></span>
+              <div class="pc-titles">
+                <h4 class="pc-title">MarketX</h4>
+                <p class="pc-sub">E-commerce for building materials</p>
+              </div>
+            </div>
+            <p class="pc-desc">An e-commerce app that helps communities buy building materials easily and stay up to date with the latest products and sales. Create an account, browse and buy.</p>
+            <ul class="chips">
+              <li class="chip">Ionic</li><li class="chip">Angular</li><li class="chip">TypeScript</li><li class="chip">Firebase</li>
+            </ul>
+            <div class="pc-foot">
+              <a class="pc-link" href="https://github.com/codewithayanda/biyelaayanda3.app.marketX" target="_blank" rel="noopener"><svg class="icon icon--fill" aria-hidden="true"><use href="#i-github"/></svg> View on GitHub</a>
+              <span class="pc-meta">2023</span>
+            </div>
+          </div>
+          <div class="shots" role="group" aria-label="MarketX screenshots">
+            <button class="shot" type="button" data-gallery="marketx" data-full="assets/imgs/projects/marketx-1.webp" data-caption="MarketX splash screen" title="View larger"><img src="assets/imgs/projects/marketx-1.webp" width="391" height="732" alt="MarketX splash screen with a construction site illustration" loading="lazy" decoding="async"></button>
+            <button class="shot" type="button" data-gallery="marketx" data-full="assets/imgs/projects/marketx-2.webp" data-caption="MarketX sign-in" title="View larger"><img src="assets/imgs/projects/marketx-2.webp" width="393" height="725" alt="MarketX sign-in screen" loading="lazy" decoding="async"></button>
+            <button class="shot" type="button" data-gallery="marketx" data-full="assets/imgs/projects/marketx-3.webp" data-caption="MarketX create account" title="View larger"><img src="assets/imgs/projects/marketx-3.webp" width="338" height="750" alt="MarketX create-account screen" loading="lazy" decoding="async"></button>
+          </div>
+        </article>
+
+        <article class="card app-card reveal" data-spot>
+          <div>
+            <div class="pc-head">
+              <span class="pc-logo"><svg class="icon" aria-hidden="true"><use href="#i-graduation"/></svg></span>
+              <div class="pc-titles">
+                <h4 class="pc-title">Wiseway</h4>
+                <p class="pc-sub">Career guidance for students</p>
+              </div>
+            </div>
+            <p class="pc-desc">A career-guidance app that helps students make wise choices. Take a quiz to find a career that fits, work out your APS with the built-in calculator, explore courses and chat with the in-app chatbot.</p>
+            <ul class="chips">
+              <li class="chip">Ionic</li><li class="chip">Angular</li><li class="chip">TypeScript</li><li class="chip">Capacitor</li>
+            </ul>
+            <div class="pc-foot">
+              <a class="pc-link" href="https://github.com/codewithayanda/biyelaayanda3.app.wiseway" target="_blank" rel="noopener"><svg class="icon icon--fill" aria-hidden="true"><use href="#i-github"/></svg> View on GitHub</a>
+              <span class="pc-meta">2023</span>
+            </div>
+          </div>
+          <div class="shots" role="group" aria-label="Wiseway screenshots">
+            <button class="shot" type="button" data-gallery="wiseway" data-full="assets/imgs/projects/wiseway-1.webp" data-caption="Wiseway landing screen" title="View larger"><img src="assets/imgs/projects/wiseway-1.webp" width="807" height="836" alt="Wiseway landing screen: Career Guidance with a Get Started button" loading="lazy" decoding="async"></button>
+            <button class="shot" type="button" data-gallery="wiseway" data-full="assets/imgs/projects/wiseway-2.webp" data-caption="Wiseway home with quick links" title="View larger"><img src="assets/imgs/projects/wiseway-2.webp" width="627" height="858" alt="Wiseway home screen with quick links to courses, career change, APS calculator, quizzes and chats" loading="lazy" decoding="async"></button>
+            <button class="shot" type="button" data-gallery="wiseway" data-full="assets/imgs/projects/wiseway-3.webp" data-caption="Wiseway chat" title="View larger"><img src="assets/imgs/projects/wiseway-3.webp" width="616" height="870" alt="Wiseway chat window open over the quick links" loading="lazy" decoding="async"></button>
+            <button class="shot" type="button" data-gallery="wiseway" data-full="assets/imgs/projects/wiseway-4.webp" data-caption="Wiseway career quiz" title="View larger"><img src="assets/imgs/projects/wiseway-4.webp" width="613" height="841" alt="Wiseway career quiz question: which of these classes did you prefer in school?" loading="lazy" decoding="async"></button>
+            <button class="shot" type="button" data-gallery="wiseway" data-full="assets/imgs/projects/wiseway-5.webp" data-caption="Wiseway courses" title="View larger"><img src="assets/imgs/projects/wiseway-5.webp" width="618" height="795" alt="Wiseway course list showing degrees, diplomas and certificates" loading="lazy" decoding="async"></button>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <div class="section contact" id="contact">
-      
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="contact-form-card">
-                        <h4 class="contact-title">Send a message</h4>
-                        <form >
-                            <div class="form-group">
-                                <input  class="form-control" type="text" placeholder="Name *" id="name" required>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" type="email" placeholder="Email *" id="email" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" id="message" placeholder="Message *"  rows="7" required></textarea>
-                            </div>
-                            <div class="form-group ">
-                                <button  class="form-control btn btn-primary" onclick="sendemail()" >Send Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="contact-info-card">
-                        <h4 class="contact-title">Get in touch</h4>
-                        <div class="row mb-2">
-                            <div class="col-1 pt-1 mr-1">
-                                <i class="ti-mobile icon-md"></i>
-                            </div>
-                            <div class="col-10 ">
-                                <h6 class="d-inline">Phone : <br> <span class="text-muted">(+27) 79 111 5835</span></h6>
-                            </div>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="col-1 pt-1 mr-1">
-                                <i class="ti-map-alt icon-md"></i>
-                            </div>
-                            <div class="col-10">
-                                <h6 class="d-inline">Address :<br> <span class="text-muted">12 Main Street Nongoma 3950</span></h6>
-                            </div>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="col-1 pt-1 mr-1">
-                                <i class="ti-envelope icon-md"></i>
-                            </div>
-                            <div class="col-10">
-                                <h6 class="d-inline">Email :<br> <span class="text-muted">biyelaayanda3@gmail.com</span></h6>
-                            </div>
-                        </div>
-                        <ul class="social-icons pt-4">
-                            <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-" aria-hidden="true"></i></a></li>
-                            <li class="social-item"><a class="social-link text-dark" href="https://linkedin.com/in/ayanda-biyela-27195b236"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
-                            <li class="social-item"><a class="social-link text-dark" href="https://github.com/biyelaayanda3/"><i class="ti-github" aria-hidden="true"></i></a></li>
-                        </ul> 
-                    </div>
-                </div>
-            </div>
-
+    <!-- Skills -->
+    <section class="section section--alt" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">Skills</p>
+          <h2 id="skills-title">What I work with</h2>
+          <p>Day-to-day tools from my current role, plus what I've picked up building my own projects.</p>
         </div>
+
+        <div class="skills-grid">
+          <article class="card skill-card reveal" data-spot>
+            <h3><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-server"/></svg></span> Backend</h3>
+            <ul class="chips">
+              <li class="chip">C#</li><li class="chip">ASP.NET Core</li><li class="chip">.NET 6 / 7 / 10</li><li class="chip">ABP Framework</li><li class="chip">REST APIs</li><li class="chip">Entity Framework Core</li><li class="chip">LINQ</li><li class="chip">ASP.NET Identity</li><li class="chip">JWT</li>
+            </ul>
+          </article>
+          <article class="card skill-card reveal" style="--d:80ms" data-spot>
+            <h3><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-layout"/></svg></span> Frontend</h3>
+            <ul class="chips">
+              <li class="chip">Angular</li><li class="chip">TypeScript</li><li class="chip">JavaScript</li><li class="chip">HTML</li><li class="chip">CSS</li><li class="chip">Razor</li><li class="chip">Tailwind CSS</li><li class="chip">Ionic</li>
+            </ul>
+          </article>
+          <article class="card skill-card reveal" style="--d:160ms" data-spot>
+            <h3><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-database"/></svg></span> Data</h3>
+            <ul class="chips">
+              <li class="chip">SQL Server</li><li class="chip">PostgreSQL</li><li class="chip">MySQL</li><li class="chip">Query optimization</li>
+            </ul>
+          </article>
+          <article class="card skill-card reveal" data-spot>
+            <h3><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-cloud"/></svg></span> Cloud and DevOps</h3>
+            <ul class="chips">
+              <li class="chip">Azure</li><li class="chip">AWS</li><li class="chip">CI/CD</li><li class="chip">Azure DevOps</li><li class="chip">GitHub Actions</li><li class="chip">AWS CodePipeline</li><li class="chip">Git</li><li class="chip">Containers</li>
+            </ul>
+          </article>
+          <article class="card skill-card reveal" style="--d:80ms" data-spot>
+            <h3><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span> Engineering practice</h3>
+            <ul class="chips">
+              <li class="chip">Clean Architecture</li><li class="chip">SOLID</li><li class="chip">Clean code</li><li class="chip">Unit testing (xUnit, NUnit)</li><li class="chip">Code reviews</li><li class="chip">Agile / Scrum</li><li class="chip">Debugging</li><li class="chip">System testing</li>
+            </ul>
+          </article>
+          <article class="card skill-card reveal" style="--d:160ms" data-spot>
+            <h3><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-sparkles"/></svg></span> AI-enabled features</h3>
+            <ul class="chips">
+              <li class="chip">POC integrations</li><li class="chip">Data preparation</li><li class="chip">API orchestration</li><li class="chip">VS Code extensions</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="meta-row">
+          <article class="card mini-card reveal" data-spot>
+            <h3><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-graduation"/></svg></span> Education</h3>
+            <p><b>Diploma in Information Communication Technology</b></p>
+            <p>Mangosuthu University of Technology, Durban</p>
+            <p><small>2020 – 2022</small></p>
+          </article>
+          <article class="card mini-card reveal" style="--d:100ms" data-spot>
+            <h3><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg></span> Languages</h3>
+            <p><b>English</b> <small>· fluent</small></p>
+            <p><b>isiZulu</b> <small>· fluent</small></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <p class="kicker">Contact</p>
+          <h2 id="contact-title">Let's talk</h2>
+          <p style="margin-top:1rem">Interested in working together, or just want to talk shop about .NET, Angular or building useful things? Send me a message and I'll get back to you.</p>
+          <div class="contact-links">
+            <a class="contact-link" href="mailto:biyelaayanda3@gmail.com">
+              <span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span>
+              <div><small>Email</small><span>biyelaayanda3@gmail.com</span></div>
+            </a>
+            <a class="contact-link" href="https://www.linkedin.com/in/ayanda-biyela-27195b236" target="_blank" rel="noopener">
+              <span class="tile"><svg class="icon icon--fill" aria-hidden="true"><use href="#i-linkedin"/></svg></span>
+              <div><small>LinkedIn</small><span>Ayanda Biyela</span></div>
+            </a>
+            <a class="contact-link" href="https://github.com/codewithayanda" target="_blank" rel="noopener">
+              <span class="tile"><svg class="icon icon--fill" aria-hidden="true"><use href="#i-github"/></svg></span>
+              <div><small>GitHub</small><span>codewithayanda</span></div>
+            </a>
+            <div class="contact-link">
+              <span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"/></svg></span>
+              <div><small>Location</small><span>Durban, South Africa</span></div>
+            </div>
+          </div>
+        </div>
+
+        <form class="card form reveal" style="--d:100ms" id="contact-form" aria-label="Send me a message">
+          <div class="field">
+            <label for="name">Name</label>
+            <input class="input" id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input class="input" id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea class="input" id="message" name="message" rows="6" placeholder="How can I help?" required></textarea>
+          </div>
+          <div class="hp" aria-hidden="true"><label>Company <input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>
+          <button class="btn btn-primary" type="submit">Send message</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+          <noscript><p class="form-status" data-state="error">The form needs JavaScript. Please email <a href="mailto:biyelaayanda3@gmail.com">biyelaayanda3@gmail.com</a> instead.</p></noscript>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> Ayanda Biyela. Built by hand with HTML, CSS and a little JavaScript.</p>
+      <div class="footer-links">
+        <a href="https://github.com/codewithayanda" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/ayanda-biyela-27195b236" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#home">Back to top</a>
+      </div>
     </div>
-    <footer class="footer py-3">
-        <div class="container">
-            <p class="small mb-0 text-light">
-                &copy; <script>document.write(new Date().getFullYear())</script> Created With <i class="ti-heart text-danger"></i> By <a href="http://devcrud.com" target="_blank"><span class="text-danger" title="Bootstrap 4 Themes and Dashboards">Ayanda Biyela</span></a> 
-            </p>
-        </div>
-    </footer>
+  </footer>
 
-	<!-- core  -->
-    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+  <dialog id="lightbox" class="lightbox" aria-label="Screenshot viewer">
+    <button class="lb-btn lb-close" type="button" aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></button>
+    <button class="lb-btn lb-prev" type="button" aria-label="Previous screenshot"><svg class="icon" aria-hidden="true"><use href="#i-chevron-left"/></svg></button>
+    <div class="lb-stage"><img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div>
+    <button class="lb-btn lb-next" type="button" aria-label="Next screenshot"><svg class="icon" aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
+    <p class="lb-caption" aria-live="polite"></p>
+  </dialog>
 
-    <!-- bootstrap 3 affix -->
-    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
-
-    <!-- Isotope  -->
-    <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
-    
-    <!-- Google mpas -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap"></script>
-
-    <!-- JohnDoe js -->
-    <script src="assets/js/johndoe.js"></script>
-    <!--Send Mail JS-->
-    
-    <script type="text/javascript">(function(){emailjs.init("GJnG5ZswZb2zdW6s_");})();</script>
-    <script src="/assets/js/sendEmail.js"></script>
-
+  <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.12.1/dist/email.min.js" integrity="sha384-VDbnsk/qjpIVHPQMkJiROI+vW/7cw0k8TFYVLUabm7EWoLEDwcXh09XQ6gQ86Y0B" crossorigin="anonymous"></script>
+  <script defer src="assets/js/main.js"></script>
 </body>
 </html>
