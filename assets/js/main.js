@@ -14,6 +14,12 @@
     set(key, value) { try { localStorage.setItem(key, value); } catch { /* storage blocked: ignore */ } },
   };
 
+  // Safari before 14 only has the old addListener API for media-query changes.
+  const onMediaChange = (query, handler) => {
+    if (query.addEventListener) query.addEventListener('change', handler);
+    else if (query.addListener) query.addListener(handler);
+  };
+
   /* ---- Configuration ---------------------------------------------------- */
   const GITHUB_USER = 'codewithayanda';
   const CONTACT_EMAIL = 'biyelaayanda3@gmail.com';
@@ -39,7 +45,7 @@
     storage.set('theme', next);
     syncThemeUI();
   });
-  prefersDark.addEventListener?.('change', syncThemeUI);
+  onMediaChange(prefersDark, syncThemeUI);
   syncThemeUI();
 
   /* ---- Header + mobile navigation --------------------------------------- */
@@ -61,7 +67,7 @@
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && nav.classList.contains('is-open')) { setNav(false); navToggle.focus(); }
   });
-  window.matchMedia('(min-width: 861px)').addEventListener('change', (event) => { if (event.matches) setNav(false); });
+  onMediaChange(window.matchMedia('(min-width: 861px)'), (event) => { if (event.matches) setNav(false); });
 
   /* ---- Scroll spy ------------------------------------------------------- */
   const navLinks = $$('.nav-link');
@@ -190,27 +196,48 @@
   if (form) {
     const status = $('.form-status', form);
     const submit = $('button[type="submit"]', form);
+    const submitLabel = submit.textContent;
 
-    const say = (message, state = '') => { status.textContent = message; status.dataset.state = state; };
+    // Every outcome shows a message, and the message is scrolled into view (a phone keyboard hides the bottom of the screen).
+    const reveal = () => status.scrollIntoView({ block: 'nearest', behavior: reduceMotion ? 'auto' : 'smooth' });
+    const say = (message, state = '') => { status.textContent = message; status.dataset.state = state; reveal(); };
     const sayFallback = () => {
       const link = document.createElement('a');
       link.href = `mailto:${CONTACT_EMAIL}`;
       link.textContent = CONTACT_EMAIL;
+      status.textContent = '';
+      status.append('Sorry, that did not go through. Please email me directly at ', link, '.');
       status.dataset.state = 'error';
-      status.replaceChildren('Sorry, that did not go through. Please email me directly at ', link, '.');
+      reveal();
     };
 
     if (window.emailjs) {
       try { window.emailjs.init(EMAILJS.publicKey); } catch (error) { console.warn('EmailJS init failed', error); }
     }
 
+    // A field stops being flagged as soon as it is edited.
+    form.addEventListener('input', (event) => event.target.removeAttribute('aria-invalid'));
+
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
-      const data = new FormData(form);
-      if (data.get('company')) return; // honeypot: real visitors never see or fill this field
 
+      // The form has novalidate, so we show our own message: the browser's pop-ups are easy to miss (or never appear) on phones.
+      const invalid = Array.from(form.querySelectorAll(':invalid'));
+      if (invalid.length) {
+        const field = invalid[0];
+        const label = field.labels && field.labels[0] ? field.labels[0].textContent.trim() : 'This field';
+        invalid.forEach((f) => f.setAttribute('aria-invalid', 'true'));
+        say(`${label}: ${field.validationMessage || 'please check this field.'}`, 'error');
+        // With a finger, focusing the field would pop the keyboard up over the message, so only do it with a mouse or keyboard.
+        if (window.matchMedia('(pointer: fine)').matches) field.focus();
+        return;
+      }
+
+      const data = new FormData(form);
       const name = String(data.get('name')).trim();
       submit.disabled = true;
+      submit.textContent = 'Sending…';
+      if (document.activeElement && document.activeElement.blur) document.activeElement.blur(); // close the phone keyboard
       say('Sending…');
       try {
         if (!window.emailjs) throw new Error('EmailJS did not load');
@@ -227,6 +254,7 @@
         sayFallback();
       } finally {
         submit.disabled = false;
+        submit.textContent = submitLabel;
       }
     });
   }

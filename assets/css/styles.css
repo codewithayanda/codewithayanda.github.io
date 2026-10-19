@@ -405,10 +405,11 @@ a.contact-link:hover { border-color: var(--accent); transform: translateX(3px); 
 .input::placeholder { color: var(--text-faint); }
 .input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent-btn) 25%, transparent); }
 textarea.input { min-height: 9rem; resize: vertical; }
-.hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
-.form-status { min-height: 1.6rem; margin: 1rem 0 0; font-size: .92rem; color: var(--text-dim); }
-.form-status[data-state="ok"] { color: var(--teal); }
-.form-status[data-state="error"] { color: var(--danger); }
+.input[aria-invalid="true"] { border-color: var(--danger); box-shadow: 0 0 0 3px color-mix(in oklab, var(--danger) 20%, transparent); }
+.form-status { min-height: 1.6rem; margin: 1rem 0 0; font-size: .92rem; color: var(--text-dim); scroll-margin-bottom: 1.5rem; }
+.form-status:not(:empty) { padding: .75rem .95rem; border: 1px solid var(--border-hi); border-radius: var(--radius-sm); background: var(--surface-2); }
+.form-status[data-state="ok"] { color: var(--teal); border-color: color-mix(in oklab, var(--teal) 45%, transparent); background: color-mix(in oklab, var(--teal) 10%, transparent); }
+.form-status[data-state="error"] { color: var(--danger); border-color: color-mix(in oklab, var(--danger) 45%, transparent); background: color-mix(in oklab, var(--danger) 10%, transparent); }
 
 /* Footer */
 .site-footer { padding: 2rem 0; border-top: 1px solid var(--border); font-size: .9rem; color: var(--text-faint); }
